@@ -6,8 +6,8 @@
   <title>BTech CSE Roadmap</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Archivo:ital,wght@0,100..900;1,100..900&family=Bangers&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Signika+Negative:wght@300..700&family=Style+Script&family=Titan+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Archivo:ital,wght@0,100..900;1,100..900&family=Bangers&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&family=Mer_multiple_valuesriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Signika+Negative:wght@300..700&family=Style+Script&family=Titan+One&display=swap" rel="stylesheet">
   <style>
     body {
       color: #e2e8f0;
@@ -26,7 +26,7 @@
       overflow: hidden;
     }
     .gradient-btn {
-      background: linear-gradient(45deg, #112f5f,  #13253a);
+      background: linear-gradient(45deg, #112f5f, #13253a);
       transition: transform 0.2s ease, background 0.3s ease;
     }
     .gradient-btn:hover {
@@ -43,15 +43,44 @@
       font-size: 0.75rem;
       font-weight: 500;
     }
-    .semTitle{
-        font-family: "Josefin Sans"
+    .semTitle {
+      font-family: "Josefin Sans";
     }
     #modal1-title {
-        font-family: "Titan One", sans-serif;
+      font-family: "Titan One", sans-serif;
     }
     .status-not-started { background: #475569; color: #e2e8f0; }
     .status-ongoing { background: #f59e0b; color: #1e293b; }
     .status-done { background: #10b981; color: #1e293b; }
+    /* Responsive Styles */
+    @media (max-width: 640px) {
+      .text-5xl { font-size: 2.5rem; }
+      .text-2xl { font-size: 1.5rem; }
+      .text-xl { font-size: 1.25rem; }
+      .text-lg { font-size: 1rem; }
+      .text-sm { font-size: 0.875rem; }
+      .p-8 { padding: 1rem; }
+      .p-6 { padding: 1rem; }
+      .p-4 { padding: 0.75rem; }
+      .ml-4 { margin-left: 0.5rem; }
+      .ml-6 { margin-left: 1rem; }
+      .max-w-6xl { max-width: 100%; }
+      .modal > div { width: 90%; max-width: 20rem; }
+      .status-badge { padding: 0.2rem 0.6rem; font-size: 0.65rem; }
+      .flex.items-center.space-x-2 { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+      .flex.space-x-2 { flex-wrap: wrap; gap: 0.5rem; }
+      img { max-width: 80%; height: auto; }
+    }
+    @media (min-width: 641px) and (max-width: 1024px) {
+      .text-5xl { font-size: 3.5rem; }
+      .text-2xl { font-size: 1.75rem; }
+      .text-xl { font-size: 1.5rem; }
+      .p-8 { padding: 1.5rem; }
+      .p-6 { padding: 1.25rem; }
+      .max-w-6xl { max-width: 90%; }
+      .modal > div { width: 80%; max-width: 24rem; }
+      img { max-width: 50%; height: auto; }
+    }
   </style>
 </head>
 <body class="p-8 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
@@ -60,7 +89,7 @@
       Life UnFuck 101
     </h1>
     <div class="w-full flex justify-center items-center"><img src="./pokemon-cheer.gif" alt="cheer up buddy" class="m-4 mt-0 rounded-2xl"></div>
-    <p class="text-center text-xs m-1">Remember what this is for... Remember all that is there to capture... Abide by the things you believe. </p>
+    <p class="text-center text-xs m-1">Remember what this is for... Remember all that is there to capture... Abide by the things you believe.</p>
     <div id="semesters" class="space-y-4"></div>
   </div>
 
@@ -79,199 +108,198 @@
   <script>
     // Sample JSON data (to be replaced with imported JSON)
     const initialData = {
-    "semesters": [
-      {
-        "semester": 1,
-        "subjects": [
-          {
-            "subject": "DSA Fundamentals",
-            "topics": [
-              { "topic": "Introduction to DSA", "subtopics": ["Why DSA?", "Applications", "Complexity Analysis (Big O)"] },
-              { "topic": "Arrays", "subtopics": ["1D & 2D Arrays", "Array Operations", "Sliding Window", "Prefix Sum"] },
-              { "topic": "Strings", "subtopics": ["String Manipulation", "Pattern Matching", "String Hashing"] },
-              { "topic": "Linked Lists", "subtopics": ["Singly Linked List", "Doubly Linked List", "Circular Linked List", "Linked List Operations"] },
-              { "topic": "Stacks & Queues", "subtopics": ["Stack Operations", "Queue Operations", "Circular Queue", "Deque", "Applications"] }
-            ]
-          },
-          {
-            "subject": "MERN Mastery I",
-            "topics": [
-              { "topic": "JavaScript Essentials", "subtopics": ["ES6+", "Async/Await", "DOM Manipulation"] },
-              { "topic": "React Basics", "subtopics": ["Components", "Props & State", "Hooks", "Lifecycle Methods"] },
-              { "topic": "Node.js & Express Basics", "subtopics": ["Server Setup", "Routing", "Middleware"] },
-              { "topic": "MongoDB Basics", "subtopics": ["CRUD Operations", "Schema Design", "Mongoose"] }
-            ]
-          },
-          {
-            "subject": "DevOps & Cloud Foundations",
-            "topics": [
-              { "topic": "Linux Fundamentals", "subtopics": ["Basic Commands", "File System", "Permissions", "Shell Scripting"] },
-              { "topic": "Version Control with Git", "subtopics": ["Git Basics", "Branching & Merging", "GitHub"] },
-              { "topic": "Cloud Computing Basics", "subtopics": ["Cloud Concepts", "Service Models (IaaS, PaaS, SaaS)", "Deployment Models", "Intro to AWS/Azure"] }
-            ]
-          }
-        ]
-      },
-      {
-        "semester": 2,
-        "subjects": [
-          {
-            "subject": "DSA Intermediate",
-            "topics": [
-              { "topic": "Recursion & Backtracking", "subtopics": ["Recursion Patterns", "Backtracking Problems"] },
-              { "topic": "Searching & Sorting", "subtopics": ["Binary Search", "Merge Sort", "Quick Sort", "Counting Sort", "Sorting Patterns"] },
-              { "topic": "Stacks & Queues Advanced", "subtopics": ["Monotonic Stack/Queue", "LRU Cache", "Stack/Queue Interview Patterns"] }
-            ]
-          },
-          {
-            "subject": "MERN Mastery II",
-            "topics": [
-              { "topic": "Advanced React", "subtopics": ["Context API", "Redux", "React Router", "Custom Hooks"] },
-              { "topic": "Next.js Essentials", "subtopics": ["Pages & Routing", "Data Fetching", "API Routes", "SSR/SSG"] },
-              { "topic": "Express.js Advanced", "subtopics": ["Error Handling", "Authentication (JWT/OAuth)", "REST API Best Practices"] }
-            ]
-          },
-          {
-            "subject": "DevOps Tools I",
-            "topics": [
-              { "topic": "CI/CD Concepts", "subtopics": ["What is CI/CD?", "Pipeline Basics", "GitHub Actions"] },
-              { "topic": "Docker Fundamentals", "subtopics": ["Containers vs VMs", "Docker CLI", "Dockerfile", "Docker Compose"] }
-            ]
-          }
-        ]
-      },
-      {
-        "semester": 3,
-        "subjects": [
-          {
-            "subject": "DSA Advanced I",
-            "topics": [
-              { "topic": "Trees", "subtopics": ["Binary Trees", "Tree Traversals", "Binary Search Trees", "Heap", "Trie"] },
-              { "topic": "Hashing", "subtopics": ["Hash Tables", "Collision Handling", "Applications"] }
-            ]
-          },
-          {
-            "subject": "DBMS Fundamentals",
-            "topics": [
-              { "topic": "Introduction to DBMS", "subtopics": ["Database Systems", "Relational Model", "DBMS Architecture"] },
-              { "topic": "ER Diagrams & Database Design", "subtopics": ["ER Model", "ER Diagrams", "Normalization (1NF, 2NF, 3NF, BCNF)"] },
-              { "topic": "SQL Basics", "subtopics": ["DDL/DML/DCL", "Joins", "Subqueries", "Aggregate Functions"] }
-            ]
-          },
-          {
-            "subject": "DevOps Tools II",
-            "topics": [
-              { "topic": "Jenkins", "subtopics": ["Jenkins Basics", "Pipeline Jobs", "Integration with Git"] },
-              { "topic": "Monitoring & Logging", "subtopics": ["Prometheus", "Grafana", "CloudWatch (AWS)"] }
-            ]
-          },
-          {
-            "subject": "Cloud Computing I",
-            "topics": [
-              { "topic": "AWS Core Services", "subtopics": ["IAM", "EC2", "S3", "RDS", "VPC"] }
-            ]
-          }
-        ]
-      },
-      {
-        "semester": 4,
-        "subjects": [
-          {
-            "subject": "DSA Advanced II",
-            "topics": [
-              { "topic": "Graphs", "subtopics": ["Graph Representation", "DFS/BFS", "Shortest Path (Dijkstra, BFS)", "Topological Sort", "Minimum Spanning Tree"] },
-              { "topic": "Dynamic Programming", "subtopics": ["DP Patterns", "1D/2D DP", "Memoization vs Tabulation"] }
-            ]
-          },
-          {
-            "subject": "DBMS Advanced",
-            "topics": [
-              { "topic": "Transactions", "subtopics": ["ACID Properties", "Concurrency Control", "Deadlocks"] },
-              { "topic": "Advanced SQL", "subtopics": ["Triggers", "Views", "Stored Procedures", "Indexing"] },
-              { "topic": "NoSQL Databases", "subtopics": ["Key-Value Stores", "Document Stores", "CAP Theorem"] }
-            ]
-          },
-          {
-            "subject": "DevOps Tools III",
-            "topics": [
-              { "topic": "Kubernetes Basics", "subtopics": ["Pods", "Deployments", "Services", "ConfigMaps & Secrets"] },
-              { "topic": "Infrastructure as Code", "subtopics": ["Terraform Basics", "Provisioning AWS Resources"] }
-            ]
-          },
-          {
-            "subject": "Cloud Computing II",
-            "topics": [
-              { "topic": "Cloud Architecture", "subtopics": ["Deployment Models", "Microservices on Cloud", "Serverless (Lambda)"] },
-              { "topic": "Cloud Security", "subtopics": ["IAM Policies", "Data Encryption", "Best Practices"] }
-            ]
-          }
-        ]
-      },
-      {
-        "semester": 5,
-        "subjects": [
-          {
-            "subject": "System Design I",
-            "topics": [
-              { "topic": "System Design Basics", "subtopics": ["Scalability", "Availability", "Consistency", "CAP Theorem"] },
-              { "topic": "Databases in System Design", "subtopics": ["SQL vs NoSQL", "Sharding", "Replication"] },
-              { "topic": "Caching", "subtopics": ["Cache Strategies", "Redis", "CDN"] }
-            ]
-          },
-          {
-            "subject": "DevOps Advanced",
-            "topics": [
-              { "topic": "Advanced CI/CD", "subtopics": ["Multi-Stage Pipelines", "Testing Automation", "Deployment Strategies"] },
-              { "topic": "Monitoring & Alerting", "subtopics": ["Log Aggregation", "Alerting Systems", "Incident Response"] }
-            ]
-          },
-          {
-            "subject": "Cloud Computing III",
-            "topics": [
-              { "topic": "Cloud Cost Optimization", "subtopics": ["Pricing Models", "Resource Monitoring", "Scaling Policies"] },
-              { "topic": "Disaster Recovery", "subtopics": ["Backups", "Failover Strategies", "High Availability"] }
-            ]
-          },
-          {
-            "subject": "Skill Integration I",
-            "topics": [
-              { "topic": "Collaboration & Communication", "subtopics": ["Teamwork", "Code Reviews", "Documentation"] },
-              { "topic": "Time & Project Management", "subtopics": ["Agile Basics", "Kanban", "Task Prioritization"] }
-            ]
-          }
-        ]
-      },
-      {
-        "semester": 6,
-        "subjects": [
-          {
-            "subject": "System Design II",
-            "topics": [
-              { "topic": "Load Balancing", "subtopics": ["Types of Load Balancers", "Algorithms", "Implementation"] },
-              { "topic": "Messaging & Queues", "subtopics": ["Message Brokers", "Kafka", "RabbitMQ", "Pub/Sub Patterns"] },
-              { "topic": "Real-time Data", "subtopics": ["WebSockets", "Polling", "Server-Sent Events"] }
-            ]
-          },
-          {
-            "subject": "Skill Integration II",
-            "topics": [
-              { "topic": "Interview Preparation", "subtopics": ["DSA Patterns", "System Design Questions", "Behavioral Interviews"] },
-              { "topic": "Resume & Portfolio", "subtopics": ["Resume Building", "Project Showcasing", "LinkedIn Optimization"] },
-              { "topic": "Soft Skills", "subtopics": ["Communication", "Problem Solving", "Adaptability", "Leadership"] }
-            ]
-          },
-          {
-            "subject": "Industry Readiness",
-            "topics": [
-              { "topic": "Open Source Contribution", "subtopics": ["Finding Projects", "Making PRs", "Community Interaction"] },
-              { "topic": "Internship & Job Applications", "subtopics": ["Finding Roles", "Applying Effectively", "Networking"] }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-  
+      "semesters": [
+        {
+          "semester": 1,
+          "subjects": [
+            {
+              "subject": "DSA Fundamentals",
+              "topics": [
+                { "topic": "Introduction to DSA", "subtopics": ["Why DSA?", "Applications", "Complexity Analysis (Big O)"], "status": "Not Started" },
+                { "topic": "Arrays", "subtopics": ["1D & 2D Arrays", "Array Operations", "Sliding Window", "Prefix Sum"], "status": "Not Started" },
+                { "topic": "Strings", "subtopics": ["String Manipulation", "Pattern Matching", "String Hashing"], "status": "Not Started" },
+                { "topic": "Linked Lists", "subtopics": ["Singly Linked List", "Doubly Linked List", "Circular Linked List", "Linked List Operations"], "status": "Not Started" },
+                { "topic": "Stacks & Queues", "subtopics": ["Stack Operations", "Queue Operations", "Circular Queue", "Deque", "Applications"], "status": "Not Started" }
+              ]
+            },
+            {
+              "subject": "MERN Mastery I",
+              "topics": [
+                { "topic": "JavaScript Essentials", "subtopics": ["ES6+", "Async/Await", "DOM Manipulation"], "status": "Not Started" },
+                { "topic": "React Basics", "subtopics": ["Components", "Props & State", "Hooks", "Lifecycle Methods"], "status": "Not Started" },
+                { "topic": "Node.js & Express Basics", "subtopics": ["Server Setup", "Routing", "Middleware"], "status": "Not Started" },
+                { "topic": "MongoDB Basics", "subtopics": ["CRUD Operations", "Schema Design", "Mongoose"], "status": "Not Started" }
+              ]
+            },
+            {
+              "subject": "DevOps & Cloud Foundations",
+              "topics": [
+                { "topic": "Linux Fundamentals", "subtopics": ["Basic Commands", "File System", "Permissions", "Shell Scripting"], "status": "Not Started" },
+                { "topic": "Version Control with Git", "subtopics": ["Git Basics", "Branching & Merging", "GitHub"], "status": "Not Started" },
+                { "topic": "Cloud Computing Basics", "subtopics": ["Cloud Concepts", "Service Models (IaaS, PaaS, SaaS)", "Deployment Models", "Intro to AWS/Azure"], "status": "Not Started" }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": 2,
+          "subjects": [
+            {
+              "subject": "DSA Intermediate",
+              "topics": [
+                { "topic": "Recursion & Backtracking", "subtopics": ["Recursion Patterns", "Backtracking Problems"], "status": "Not Started" },
+                { "topic": "Searching & Sorting", "subtopics": ["Binary Search", "Merge Sort", "Quick Sort", "Counting Sort", "Sorting Patterns"], "status": "Not Started" },
+                { "topic": "Stacks & Queues Advanced", "subtopics": ["Monotonic Stack/Queue", "LRU Cache", "Stack/Queue Interview Patterns"], "status": "Not Started" }
+              ]
+            },
+            {
+              "subject": "MERN Mastery II",
+              "topics": [
+                { "topic": "Advanced React", "subtopics": ["Context API", "Redux", "React Router", "Custom App.jsxCustom Hooks"], "status": "Not Started" },
+                { "topic": "Next.js Essentials", "subtopics": ["Pages & Routing", "Data Fetching", "API Routes", "SSR/SSG"], "status": "Not Started" },
+                { "topic": "Express.js Advanced", "subtopics": ["Error Handling", "Authentication (JWT/OAuth)", "REST API Best Practices"], "status": "Not Started" }
+              ]
+            },
+            {
+              "subject": "DevOps Tools I",
+              "topics": [
+                { "topic": "CI/CD Concepts", "subtopics": ["What is CI/CD?", "Pipeline Basics", "GitHub Actions"], "status": "Not Started" },
+                { "topic": "Docker Fundamentals", "subtopics": ["Containers vs VMs", "Docker CLI", "Dockerfile", "Docker Compose"], "status": "Not Started" }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": 3,
+          "subjects": [
+            {
+              "subject": "DSA Advanced I",
+              "topics": [
+                { "topic": "Trees", "subtopics": ["Binary Trees", "Tree Traversals", "Binary Search Trees", "Heap", "Trie"], "status": "Not Started" },
+                { "topic": "Hashing", "subtopics": ["Hash Tables", "Collision Handling", "Applications"], "status": "Not Started" }
+              ]
+            },
+            {
+              "subject": "DBMS Fundamentals",
+              "topics": [
+                { "topic": "Introduction to DBMS", "subtopics": ["Database Systems", "Relational Model", "DBMS Architecture"], "status": "Not Started" },
+                { "topic": "ER Diagrams & Database Design", "subtopics": ["ER Model", "ER Diagrams", "Normalization (1NF, 2NF, 3NF, BCNF)"], "status": "Not Started" },
+                { "topic": "SQL Basics", "subtopics": ["DDL/DML/DCL", "Joins", "Subqueries", "Aggregate Functions"], "status": "Not Started" }
+              ]
+            },
+            {
+              "subject": "DevOps Tools II",
+              "topics": [
+                { "topic": "Jenkins", "subtopics": ["Jenkins Basics", "Pipeline Jobs", "Integration with Git"], "status": "Not Started" },
+                { "topic": "Monitoring & Logging", "subtopics": ["Prometheus", "Grafana", "CloudWatch (AWS)"], "status": "Not Started" }
+              ]
+            },
+            {
+              "subject": "Cloud Computing I",
+              "topics": [
+                { "topic": "AWS Core Services", "subtopics": ["IAM", "EC2", "S3", "RDS", "VPC"], "status": "Not Started" }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": 4,
+          "subjects": [
+            {
+              "subject": "DSA Advanced II",
+              "topics": [
+                { "topic": "Graphs", "subtopics": ["Graph Representation", "DFS/BFS", "Shortest Path (Dijkstra, BFS)", "Topological Sort", "Minimum Spanning Tree"], "status": "Not Started" },
+                { "topic": "Dynamic Programming", "subtopics": ["DP Patterns", "1D/2D DP", "Memoization vs Tabulation"], "status": "Not Started" }
+              ]
+            },
+            {
+              "subject": "DBMS Advanced",
+              "topics": [
+                { "topic": "Transactions", "subtopics": ["ACID Properties", "Concurrency Control", "Deadlocks"], "status": "Not Started" },
+                { "topic": "Advanced SQL", "subtopics": ["Triggers", "Views", "Stored Procedures", "Indexing"], "status": "Not Started" },
+                { "topic": "NoSQL Databases", "subtopics": ["Key-Value Stores", "Document Stores", "CAP Theorem"], "status": "Not Started" }
+              ]
+            },
+            {
+              "subject": "DevOps Tools III",
+              "topics": [
+                { "topic": "Kubernetes Basics", "subtopics": ["Pods", "Deployments", "Services", "ConfigMaps & Secrets"], "status": "Not Started" },
+                { "topic": "Infrastructure as Code", "subtopics": ["Terraform Basics", "Provisioning AWS Resources"], "status": "Not Started" }
+              ]
+            },
+            {
+              "subject": "Cloud Computing II",
+              "topics": [
+                { "topic": "Cloud Architecture", "subtopics": ["Deployment Models", "Microservices on Cloud", "Serverless (Lambda)"], "status": "Not Started" },
+                { "topic": "Cloud Security", "subtopics": ["IAM Policies", "Data Encryption", "Best Practices"], "status": "Not Started" }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": 5,
+          "subjects": [
+            {
+              "subject": "System Design I",
+              "topics": [
+                { "topic": "System Design Basics", "subtopics": ["Scalability", "Availability", "Consistency", "CAP Theorem"], "status": "Not Started" },
+                { "topic": "Databases in System Design", "subtopics": ["SQL vs NoSQL", "Sharding", "Replication"], "status": "Not Started" },
+                { "topic": "Caching", "subtopics": ["Cache Strategies", "Redis", "CDN"], "status": "Not Started" }
+              ]
+            },
+            {
+              "subject": "DevOps Advanced",
+              "topics": [
+                { "topic": "Advanced CI/CD", "subtopics": ["Multi-Stage Pipelines", "Testing Automation", "Deployment Strategies"], "status": "Not Started" },
+                { "topic": "Monitoring & Alerting", "subtopics": ["Log Aggregation", "Alerting Systems", "Incident Response"], "status": "Not Started" }
+              ]
+            },
+            {
+              "subject": "Cloud Computing III",
+              "topics": [
+                { "topic": "Cloud Cost Optimization", "subtopics": ["Pricing Models", "Resource Monitoring", "Scaling Policies"], "status": "Not Started" },
+                { "topic": "Disaster Recovery", "subtopics": ["Backups", "Failover Strategies", "High Availability"], "status": "Not Started" }
+              ]
+            },
+            {
+              "subject": "Skill Integration I",
+              "topics": [
+                { "topic": "Collaboration & Communication", "subtopics": ["Teamwork", "Code Reviews", "Documentation"], "status": "Not Started" },
+                { "topic": "Time & Project Management", "subtopics": ["Agile Basics", "Kanban", "Task Prioritization"], "status": "Not Started" }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": 6,
+          "subjects": [
+            {
+              "subject": "System Design II",
+              "topics": [
+                { "topic": "Load Balancing", "subtopics": ["Types of Load Balancers", "Algorithms", "Implementation"], "status": "Not Started" },
+                { "topic": "Messaging & Queues", "subtopics": ["Message Brokers", "Kafka", "RabbitMQ", "Pub/Sub Patterns"], "status": "Not Started" },
+                { "topic": "Real-time Data", "subtopics": ["WebSockets", "Polling", "Server-Sent Events"], "status": "Not Started" }
+              ]
+            },
+            {
+              "subject": "Skill Integration II",
+              "topics": [
+                { "topic": "Interview Preparation", "subtopics": ["DSA Patterns", "System Design Questions", "Behavioral Interviews"], "status": "Not Started" },
+                { "topic": "Resume & Portfolio", "subtopics": ["Resume Building", "Project Showcasing", "LinkedIn Optimization"], "status": "Not Started" },
+                { "topic": "Soft Skills", "subtopics": ["Communication", "Problem Solving", "Adaptability", "Leadership"], "status": "Not Started" }
+              ]
+            },
+            {
+              "subject": "Industry Readiness",
+              "topics": [
+                { "topic": "Open Source Contribution", "subtopics": ["Finding Projects", "Making PRs", "Community Interaction"], "status": "Not Started" },
+                { "topic": "Internship & Job Applications", "subtopics": ["Finding Roles", "Applying Effectively", "Networking"], "status": "Not Started" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
 
     // Load data from localStorage or use initialData, ensuring status exists
     let curriculum = JSON.parse(localStorage.getItem('curriculum')) || initialData;
@@ -296,11 +324,11 @@
       semestersContainer.innerHTML = '';
       curriculum.semesters.forEach(sem => {
         const semDiv = document.createElement('div');
-        semDiv.className = 'bg-gradient-to-r from-black to-neutral-950/30 border border-neutral-500   backdrop-blur-sm rounded-xl p-6 fade-in';
+        semDiv.className = 'bg-gradient-to-r from-black to-neutral-950/30 border border-neutral-500 backdrop-blur-sm rounded-xl p-6 fade-in';
         semDiv.innerHTML = `
-          <button onclick="toggleSemester(${sem.semester})" class="w-full   text-left flex justify-between items-center">
+          <button onclick="toggleSemester(${sem.semester})" class="w-full text-left flex justify-between items-center">
             <h2 class="text-2xl font-bold semTitle text-gray-200">Semester ${sem.semester}</h2>
-            <svg id="toggle-icon-${sem.semester}" class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg id="toggle-icon-${sem.semester}" class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
