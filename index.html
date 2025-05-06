@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BTech CSE Roadmap</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Archivo:ital,wght@0,100..900;1,100..900&family=Bangers&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Signika+Negative:wght@300..700&family=Style+Script&family=Titan+One&display=swap" rel="stylesheet">
+  <style>
+    body {
+      color: #e2e8f0;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+    }
+    .fade-in {
+      animation: fadeIn 0.6s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .slide-toggle {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      overflow: hidden;
+    }
+    .gradient-btn {
+      background: linear-gradient(45deg, #112f5f,  #13253a);
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+    .gradient-btn:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(45deg, #101b33, #071223);
+    }
+    .modal {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(5px);
+    }
+    .status-badge {
+      padding: 0.4rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+    .semTitle{
+        font-family: "Josefin Sans"
+    }
+    #modal1-title {
+        font-family: "Titan One", sans-serif;
+    }
+    .status-not-started { background: #475569; color: #e2e8f0; }
+    .status-ongoing { background: #f59e0b; color: #1e293b; }
+    .status-done { background: #10b981; color: #1e293b; }
+  </style>
+</head>
+<body class="p-8 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+  <div class="max-w-6xl mx-auto">
+    <h1 class="text-5xl font-bold text-center mb-4 bg-clip-text text-transparent underline decoration-pink-600 decoration-1 underline-offset-8 bg-gradient-to-br from-pink-800 via-pink-300 to-pink-800">
+      Life UnFuck 101
+    </h1>
+    <div class="w-full flex justify-center items-center"><img src="./pokemon-cheer.gif" alt="cheer up buddy" class="m-4 mt-0 rounded-2xl"></div>
+    <p class="text-center text-xs m-1">Remember what this is for... Remember all that is there to capture... Abide by the things you believe. </p>
+    <div id="semesters" class="space-y-4"></div>
+  </div>
+
+  <!-- Modal for Adding/Editing -->
+  <div id="modal" class="fixed inset-0 modal hidden flex items-center justify-center">
+    <div class="bg-neutral-900 rounded-lg p-6 w-full max-w-md">
+      <h3 id="modal-title" class="text-xl font-bold mb-4"></h3>
+      <input id="modal-input" type="text" class="w-full bg-slate-700 text-white p-2 rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter name">
+      <div class="flex justify-end space-x-2">
+        <button id="modal-cancel" class="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700">Cancel</button>
+        <button id="modal-submit" class="px-4 py-2 gradient-btn text-white rounded-md">Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Sample JSON data (to be replaced with imported JSON)
+    const initialData = {
+    "semesters": [
+      {
+        "semester": 1,
+        "subjects": [
+          {
+            "subject": "DSA Fundamentals",
+            "topics": [
+              { "topic": "Introduction to DSA", "subtopics": ["Why DSA?", "Applications", "Complexity Analysis (Big O)"] },
+              { "topic": "Arrays", "subtopics": ["1D & 2D Arrays", "Array Operations", "Sliding Window", "Prefix Sum"] },
+              { "topic": "Strings", "subtopics": ["String Manipulation", "Pattern Matching", "String Hashing"] },
+              { "topic": "Linked Lists", "subtopics": ["Singly Linked List", "Doubly Linked List", "Circular Linked List", "Linked List Operations"] },
+              { "topic": "Stacks & Queues", "subtopics": ["Stack Operations", "Queue Operations", "Circular Queue", "Deque", "Applications"] }
+            ]
+          },
+          {
+            "subject": "MERN Mastery I",
+            "topics": [
+              { "topic": "JavaScript Essentials", "subtopics": ["ES6+", "Async/Await", "DOM Manipulation"] },
+              { "topic": "React Basics", "subtopics": ["Components", "Props & State", "Hooks", "Lifecycle Methods"] },
+              { "topic": "Node.js & Express Basics", "subtopics": ["Server Setup", "Routing", "Middleware"] },
+              { "topic": "MongoDB Basics", "subtopics": ["CRUD Operations", "Schema Design", "Mongoose"] }
+            ]
+          },
+          {
+            "subject": "DevOps & Cloud Foundations",
+            "topics": [
+              { "topic": "Linux Fundamentals", "subtopics": ["Basic Commands", "File System", "Permissions", "Shell Scripting"] },
+              { "topic": "Version Control with Git", "subtopics": ["Git Basics", "Branching & Merging", "GitHub"] },
+              { "topic": "Cloud Computing Basics", "subtopics": ["Cloud Concepts", "Service Models (IaaS, PaaS, SaaS)", "Deployment Models", "Intro to AWS/Azure"] }
+            ]
+          }
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          {
+            "subject": "DSA Intermediate",
+            "topics": [
+              { "topic": "Recursion & Backtracking", "subtopics": ["Recursion Patterns", "Backtracking Problems"] },
+              { "topic": "Searching & Sorting", "subtopics": ["Binary Search", "Merge Sort", "Quick Sort", "Counting Sort", "Sorting Patterns"] },
+              { "topic": "Stacks & Queues Advanced", "subtopics": ["Monotonic Stack/Queue", "LRU Cache", "Stack/Queue Interview Patterns"] }
+            ]
+          },
+          {
+            "subject": "MERN Mastery II",
+            "topics": [
+              { "topic": "Advanced React", "subtopics": ["Context API", "Redux", "React Router", "Custom Hooks"] },
+              { "topic": "Next.js Essentials", "subtopics": ["Pages & Routing", "Data Fetching", "API Routes", "SSR/SSG"] },
+              { "topic": "Express.js Advanced", "subtopics": ["Error Handling", "Authentication (JWT/OAuth)", "REST API Best Practices"] }
+            ]
+          },
+          {
+            "subject": "DevOps Tools I",
+            "topics": [
+              { "topic": "CI/CD Concepts", "subtopics": ["What is CI/CD?", "Pipeline Basics", "GitHub Actions"] },
+              { "topic": "Docker Fundamentals", "subtopics": ["Containers vs VMs", "Docker CLI", "Dockerfile", "Docker Compose"] }
+            ]
+          }
+        ]
+      },
+      {
+        "semester": 3,
+        "subjects": [
+          {
+            "subject": "DSA Advanced I",
+            "topics": [
+              { "topic": "Trees", "subtopics": ["Binary Trees", "Tree Traversals", "Binary Search Trees", "Heap", "Trie"] },
+              { "topic": "Hashing", "subtopics": ["Hash Tables", "Collision Handling", "Applications"] }
+            ]
+          },
+          {
+            "subject": "DBMS Fundamentals",
+            "topics": [
+              { "topic": "Introduction to DBMS", "subtopics": ["Database Systems", "Relational Model", "DBMS Architecture"] },
+              { "topic": "ER Diagrams & Database Design", "subtopics": ["ER Model", "ER Diagrams", "Normalization (1NF, 2NF, 3NF, BCNF)"] },
+              { "topic": "SQL Basics", "subtopics": ["DDL/DML/DCL", "Joins", "Subqueries", "Aggregate Functions"] }
+            ]
+          },
+          {
+            "subject": "DevOps Tools II",
+            "topics": [
+              { "topic": "Jenkins", "subtopics": ["Jenkins Basics", "Pipeline Jobs", "Integration with Git"] },
+              { "topic": "Monitoring & Logging", "subtopics": ["Prometheus", "Grafana", "CloudWatch (AWS)"] }
+            ]
+          },
+          {
+            "subject": "Cloud Computing I",
+            "topics": [
+              { "topic": "AWS Core Services", "subtopics": ["IAM", "EC2", "S3", "RDS", "VPC"] }
+            ]
+          }
+        ]
+      },
+      {
+        "semester": 4,
+        "subjects": [
+          {
+            "subject": "DSA Advanced II",
+            "topics": [
+              { "topic": "Graphs", "subtopics": ["Graph Representation", "DFS/BFS", "Shortest Path (Dijkstra, BFS)", "Topological Sort", "Minimum Spanning Tree"] },
+              { "topic": "Dynamic Programming", "subtopics": ["DP Patterns", "1D/2D DP", "Memoization vs Tabulation"] }
+            ]
+          },
+          {
+            "subject": "DBMS Advanced",
+            "topics": [
+              { "topic": "Transactions", "subtopics": ["ACID Properties", "Concurrency Control", "Deadlocks"] },
+              { "topic": "Advanced SQL", "subtopics": ["Triggers", "Views", "Stored Procedures", "Indexing"] },
+              { "topic": "NoSQL Databases", "subtopics": ["Key-Value Stores", "Document Stores", "CAP Theorem"] }
+            ]
+          },
+          {
+            "subject": "DevOps Tools III",
+            "topics": [
+              { "topic": "Kubernetes Basics", "subtopics": ["Pods", "Deployments", "Services", "ConfigMaps & Secrets"] },
+              { "topic": "Infrastructure as Code", "subtopics": ["Terraform Basics", "Provisioning AWS Resources"] }
+            ]
+          },
+          {
+            "subject": "Cloud Computing II",
+            "topics": [
+              { "topic": "Cloud Architecture", "subtopics": ["Deployment Models", "Microservices on Cloud", "Serverless (Lambda)"] },
+              { "topic": "Cloud Security", "subtopics": ["IAM Policies", "Data Encryption", "Best Practices"] }
+            ]
+          }
+        ]
+      },
+      {
+        "semester": 5,
+        "subjects": [
+          {
+            "subject": "System Design I",
+            "topics": [
+              { "topic": "System Design Basics", "subtopics": ["Scalability", "Availability", "Consistency", "CAP Theorem"] },
+              { "topic": "Databases in System Design", "subtopics": ["SQL vs NoSQL", "Sharding", "Replication"] },
+              { "topic": "Caching", "subtopics": ["Cache Strategies", "Redis", "CDN"] }
+            ]
+          },
+          {
+            "subject": "DevOps Advanced",
+            "topics": [
+              { "topic": "Advanced CI/CD", "subtopics": ["Multi-Stage Pipelines", "Testing Automation", "Deployment Strategies"] },
+              { "topic": "Monitoring & Alerting", "subtopics": ["Log Aggregation", "Alerting Systems", "Incident Response"] }
+            ]
+          },
+          {
+            "subject": "Cloud Computing III",
+            "topics": [
+              { "topic": "Cloud Cost Optimization", "subtopics": ["Pricing Models", "Resource Monitoring", "Scaling Policies"] },
+              { "topic": "Disaster Recovery", "subtopics": ["Backups", "Failover Strategies", "High Availability"] }
+            ]
+          },
+          {
+            "subject": "Skill Integration I",
+            "topics": [
+              { "topic": "Collaboration & Communication", "subtopics": ["Teamwork", "Code Reviews", "Documentation"] },
+              { "topic": "Time & Project Management", "subtopics": ["Agile Basics", "Kanban", "Task Prioritization"] }
+            ]
+          }
+        ]
+      },
+      {
+        "semester": 6,
+        "subjects": [
+          {
+            "subject": "System Design II",
+            "topics": [
+              { "topic": "Load Balancing", "subtopics": ["Types of Load Balancers", "Algorithms", "Implementation"] },
+              { "topic": "Messaging & Queues", "subtopics": ["Message Brokers", "Kafka", "RabbitMQ", "Pub/Sub Patterns"] },
+              { "topic": "Real-time Data", "subtopics": ["WebSockets", "Polling", "Server-Sent Events"] }
+            ]
+          },
+          {
+            "subject": "Skill Integration II",
+            "topics": [
+              { "topic": "Interview Preparation", "subtopics": ["DSA Patterns", "System Design Questions", "Behavioral Interviews"] },
+              { "topic": "Resume & Portfolio", "subtopics": ["Resume Building", "Project Showcasing", "LinkedIn Optimization"] },
+              { "topic": "Soft Skills", "subtopics": ["Communication", "Problem Solving", "Adaptability", "Leadership"] }
+            ]
+          },
+          {
+            "subject": "Industry Readiness",
+            "topics": [
+              { "topic": "Open Source Contribution", "subtopics": ["Finding Projects", "Making PRs", "Community Interaction"] },
+              { "topic": "Internship & Job Applications", "subtopics": ["Finding Roles", "Applying Effectively", "Networking"] }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
+
+    // Load data from localStorage or use initialData, ensuring status exists
+    let curriculum = JSON.parse(localStorage.getItem('curriculum')) || initialData;
+    // Normalize data to ensure all topics have a status
+    curriculum.semesters.forEach(sem => {
+      sem.subjects.forEach(sub => {
+        sub.topics.forEach(topic => {
+          if (!topic.status) topic.status = "Not Started";
+        });
+      });
+    });
+
+    const semestersContainer = document.getElementById('semesters');
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalInput = document.getElementById('modal-input');
+    const modalCancel = document.getElementById('modal-cancel');
+    const modalSubmit = document.getElementById('modal-submit');
+
+    // Render the curriculum
+    function renderCurriculum() {
+      semestersContainer.innerHTML = '';
+      curriculum.semesters.forEach(sem => {
+        const semDiv = document.createElement('div');
+        semDiv.className = 'bg-gradient-to-r from-black to-neutral-950/30 border border-neutral-500   backdrop-blur-sm rounded-xl p-6 fade-in';
+        semDiv.innerHTML = `
+          <button onclick="toggleSemester(${sem.semester})" class="w-full   text-left flex justify-between items-center">
+            <h2 class="text-2xl font-bold semTitle text-gray-200">Semester ${sem.semester}</h2>
+            <svg id="toggle-icon-${sem.semester}" class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="sem-content-${sem.semester}" class="slide-toggle mt-4" style="max-height: 0; opacity: 0;">
+            ${sem.subjects.map(sub => `
+              <div class="bg-slate-700/50 rounded-lg p-4 mb-4">
+                <div class="flex justify-between items-center">
+                  <h3 class="text-xl font-medium text-gray-100">${sub.subject}</h3>
+                  <button onclick="openModal('Add Topic', '', (value) => addTopic(${sem.semester}, '${sub.subject}', value))" class="px-4 py-2 gradient-btn text-white rounded-md text-sm">Add Topic</button>
+                </div>
+                ${sub.topics.map(topic => `
+                  <div class="ml-4 mt-3 border-l-2 border-blue-500 pl-4">
+                    <div class="flex justify-between items-center">
+                      <div class="flex items-center space-x-2">
+                        <span class="text-lg font-medium">${topic.topic}</span>
+                        <span class="status-badge status-${(topic.status || 'Not Started').toLowerCase().replace(' ', '-')}" title="Status">${topic.status || 'Not Started'}</span>
+                      </div>
+                      <div class="flex space-x-2">
+                        <select onchange="updateStatus(${sem.semester}, '${sub.subject}', '${topic.topic}', this.value)" class="bg-slate-600 text-white text-sm rounded-md p-1">
+                          <option value="Not Started" ${topic.status === 'Not Started' ? 'selected' : ''}>Not Started</option>
+                          <option value="Ongoing" ${topic.status === 'Ongoing' ? 'selected' : ''}>Ongoing</option>
+                          <option value="Done" ${topic.status === 'Done' ? 'selected' : ''}>Done</option>
+                        </select>
+                        <button onclick="openModal('Edit Topic', '${topic.topic}', (value) => editTopic(${sem.semester}, '${sub.subject}', '${topic.topic}', value))" class="px-2 py-1 bg-gray-600 text-white rounded-md text-sm hover:bg-gray-700">Edit</button>
+                        <button onclick="openModal('Add Subtopic', '', (value) => addSubtopic(${sem.semester}, '${sub.subject}', '${topic.topic}', value))" class="px-2 py-1 gradient-btn text-white rounded-md text-sm">Add Subtopic</button>
+                      </div>
+                    </div>
+                    ${topic.subtopics.map(subtopic => `
+                      <div class="ml-6 mt-2 text-gray-400 text-sm">• ${subtopic}</div>
+                    `).join('')}
+                  </div>
+                `).join('')}
+              </div>
+            `).join('')}
+          </div>
+        `;
+        semestersContainer.appendChild(semDiv);
+      });
+      saveToLocalStorage();
+    }
+
+    // Toggle semester visibility
+    function toggleSemester(semester) {
+      const content = document.getElementById(`sem-content-${semester}`);
+      const icon = document.getElementById(`toggle-icon-${semester}`);
+      if (content.style.maxHeight === '0px' || content.style.maxHeight === '') {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        content.style.opacity = '1';
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.style.maxHeight = '0px';
+        content.style.opacity = '0';
+        icon.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    // Open modal
+    function openModal(title, defaultValue, callback) {
+      modalTitle.textContent = title;
+      modalInput.value = defaultValue;
+      modal.classList.remove('hidden');
+      modalInput.focus();
+      modalSubmit.onclick = () => {
+        if (modalInput.value.trim()) {
+          callback(modalInput.value.trim());
+          closeModal();
+        }
+      };
+      modalCancel.onclick = closeModal;
+    }
+
+    // Close modal
+    function closeModal() {
+      modal.classList.add('hidden');
+      modalInput.value = '';
+    }
+
+    // Add new topic
+    function addTopic(semester, subject, topicName) {
+      const sem = curriculum.semesters.find(s => s.semester === semester);
+      const sub = sem.subjects.find(s => s.subject === subject);
+      sub.topics.push({ topic: topicName, subtopics: [], status: 'Not Started' });
+      renderCurriculum();
+    }
+
+    // Add new subtopic
+    function addSubtopic(semester, subject, topic, subtopicName) {
+      const sem = curriculum.semesters.find(s => s.semester === semester);
+      const sub = sem.subjects.find(s => s.subject === subject);
+      const top = sub.topics.find(t => t.topic === topic);
+      top.subtopics.push(subtopicName);
+      renderCurriculum();
+    }
+
+    // Edit topic name
+    function editTopic(semester, subject, oldTopic, newTopic) {
+      const sem = curriculum.semesters.find(s => s.semester === semester);
+      const sub = sem.subjects.find(s => s.subject === subject);
+      const top = sub.topics.find(t => t.topic === oldTopic);
+      top.topic = newTopic;
+      renderCurriculum();
+    }
+
+    // Update topic status
+    function updateStatus(semester, subject, topic, status) {
+      const sem = curriculum.semesters.find(s => s.semester === semester);
+      const sub = sem.subjects.find(s => s.subject === subject);
+      const top = sub.topics.find(t => t.topic === topic);
+      top.status = status;
+      renderCurriculum();
+    }
+
+    // Save to localStorage
+    function saveToLocalStorage() {
+      localStorage.setItem('curriculum', JSON.stringify(curriculum));
+    }
+
+    // Initial render
+    renderCurriculum();
+  </script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+{
+    "semesters": [
+      {
+        "semester": 1,
+        "subjects": [
+          {
+            "subject": "DSA Fundamentals",
+            "topics": [
+              { "topic": "Introduction to DSA", "subtopics": ["Why DSA?", "Applications", "Complexity Analysis (Big O)"] },
+              { "topic": "Arrays", "subtopics": ["1D & 2D Arrays", "Array Operations", "Sliding Window", "Prefix Sum"] },
+              { "topic": "Strings", "subtopics": ["String Manipulation", "Pattern Matching", "String Hashing"] },
+              { "topic": "Linked Lists", "subtopics": ["Singly Linked List", "Doubly Linked List", "Circular Linked List", "Linked List Operations"] },
+              { "topic": "Stacks & Queues", "subtopics": ["Stack Operations", "Queue Operations", "Circular Queue", "Deque", "Applications"] }
+            ]
+          },
+          {
+            "subject": "MERN Mastery I",
+            "topics": [
+              { "topic": "JavaScript Essentials", "subtopics": ["ES6+", "Async/Await", "DOM Manipulation"] },
+              { "topic": "React Basics", "subtopics": ["Components", "Props & State", "Hooks", "Lifecycle Methods"] },
+              { "topic": "Node.js & Express Basics", "subtopics": ["Server Setup", "Routing", "Middleware"] },
+              { "topic": "MongoDB Basics", "subtopics": ["CRUD Operations", "Schema Design", "Mongoose"] }
+            ]
+          },
+          {
+            "subject": "DevOps & Cloud Foundations",
+            "topics": [
+              { "topic": "Linux Fundamentals", "subtopics": ["Basic Commands", "File System", "Permissions", "Shell Scripting"] },
+              { "topic": "Version Control with Git", "subtopics": ["Git Basics", "Branching & Merging", "GitHub"] },
+              { "topic": "Cloud Computing Basics", "subtopics": ["Cloud Concepts", "Service Models (IaaS, PaaS, SaaS)", "Deployment Models", "Intro to AWS/Azure"] }
+            ]
+          }
+        ]
+      },
+      {
+        "semester": 2,
+        "subjects": [
+          {
+            "subject": "DSA Intermediate",
+            "topics": [
+              { "topic": "Recursion & Backtracking", "subtopics": ["Recursion Patterns", "Backtracking Problems"] },
+              { "topic": "Searching & Sorting", "subtopics": ["Binary Search", "Merge Sort", "Quick Sort", "Counting Sort", "Sorting Patterns"] },
+              { "topic": "Stacks & Queues Advanced", "subtopics": ["Monotonic Stack/Queue", "LRU Cache", "Stack/Queue Interview Patterns"] }
+            ]
+          },
+          {
+            "subject": "MERN Mastery II",
+            "topics": [
+              { "topic": "Advanced React", "subtopics": ["Context API", "Redux", "React Router", "Custom Hooks"] },
+              { "topic": "Next.js Essentials", "subtopics": ["Pages & Routing", "Data Fetching", "API Routes", "SSR/SSG"] },
+              { "topic": "Express.js Advanced", "subtopics": ["Error Handling", "Authentication (JWT/OAuth)", "REST API Best Practices"] }
+            ]
+          },
+          {
+            "subject": "DevOps Tools I",
+            "topics": [
+              { "topic": "CI/CD Concepts", "subtopics": ["What is CI/CD?", "Pipeline Basics", "GitHub Actions"] },
+              { "topic": "Docker Fundamentals", "subtopics": ["Containers vs VMs", "Docker CLI", "Dockerfile", "Docker Compose"] }
+            ]
+          }
+        ]
+      },
+      {
+        "semester": 3,
+        "subjects": [
+          {
+            "subject": "DSA Advanced I",
+            "topics": [
+              { "topic": "Trees", "subtopics": ["Binary Trees", "Tree Traversals", "Binary Search Trees", "Heap", "Trie"] },
+              { "topic": "Hashing", "subtopics": ["Hash Tables", "Collision Handling", "Applications"] }
+            ]
+          },
+          {
+            "subject": "DBMS Fundamentals",
+            "topics": [
+              { "topic": "Introduction to DBMS", "subtopics": ["Database Systems", "Relational Model", "DBMS Architecture"] },
+              { "topic": "ER Diagrams & Database Design", "subtopics": ["ER Model", "ER Diagrams", "Normalization (1NF, 2NF, 3NF, BCNF)"] },
+              { "topic": "SQL Basics", "subtopics": ["DDL/DML/DCL", "Joins", "Subqueries", "Aggregate Functions"] }
+            ]
+          },
+          {
+            "subject": "DevOps Tools II",
+            "topics": [
+              { "topic": "Jenkins", "subtopics": ["Jenkins Basics", "Pipeline Jobs", "Integration with Git"] },
+              { "topic": "Monitoring & Logging", "subtopics": ["Prometheus", "Grafana", "CloudWatch (AWS)"] }
+            ]
+          },
+          {
+            "subject": "Cloud Computing I",
+            "topics": [
+              { "topic": "AWS Core Services", "subtopics": ["IAM", "EC2", "S3", "RDS", "VPC"] }
+            ]
+          }
+        ]
+      },
+      {
+        "semester": 4,
+        "subjects": [
+          {
+            "subject": "DSA Advanced II",
+            "topics": [
+              { "topic": "Graphs", "subtopics": ["Graph Representation", "DFS/BFS", "Shortest Path (Dijkstra, BFS)", "Topological Sort", "Minimum Spanning Tree"] },
+              { "topic": "Dynamic Programming", "subtopics": ["DP Patterns", "1D/2D DP", "Memoization vs Tabulation"] }
+            ]
+          },
+          {
+            "subject": "DBMS Advanced",
+            "topics": [
+              { "topic": "Transactions", "subtopics": ["ACID Properties", "Concurrency Control", "Deadlocks"] },
+              { "topic": "Advanced SQL", "subtopics": ["Triggers", "Views", "Stored Procedures", "Indexing"] },
+              { "topic": "NoSQL Databases", "subtopics": ["Key-Value Stores", "Document Stores", "CAP Theorem"] }
+            ]
+          },
+          {
+            "subject": "DevOps Tools III",
+            "topics": [
+              { "topic": "Kubernetes Basics", "subtopics": ["Pods", "Deployments", "Services", "ConfigMaps & Secrets"] },
+              { "topic": "Infrastructure as Code", "subtopics": ["Terraform Basics", "Provisioning AWS Resources"] }
+            ]
+          },
+          {
+            "subject": "Cloud Computing II",
+            "topics": [
+              { "topic": "Cloud Architecture", "subtopics": ["Deployment Models", "Microservices on Cloud", "Serverless (Lambda)"] },
+              { "topic": "Cloud Security", "subtopics": ["IAM Policies", "Data Encryption", "Best Practices"] }
+            ]
+          }
+        ]
+      },
+      {
+        "semester": 5,
+        "subjects": [
+          {
+            "subject": "System Design I",
+            "topics": [
+              { "topic": "System Design Basics", "subtopics": ["Scalability", "Availability", "Consistency", "CAP Theorem"] },
+              { "topic": "Databases in System Design", "subtopics": ["SQL vs NoSQL", "Sharding", "Replication"] },
+              { "topic": "Caching", "subtopics": ["Cache Strategies", "Redis", "CDN"] }
+            ]
+          },
+          {
+            "subject": "DevOps Advanced",
+            "topics": [
+              { "topic": "Advanced CI/CD", "subtopics": ["Multi-Stage Pipelines", "Testing Automation", "Deployment Strategies"] },
+              { "topic": "Monitoring & Alerting", "subtopics": ["Log Aggregation", "Alerting Systems", "Incident Response"] }
+            ]
+          },
+          {
+            "subject": "Cloud Computing III",
+            "topics": [
+              { "topic": "Cloud Cost Optimization", "subtopics": ["Pricing Models", "Resource Monitoring", "Scaling Policies"] },
+              { "topic": "Disaster Recovery", "subtopics": ["Backups", "Failover Strategies", "High Availability"] }
+            ]
+          },
+          {
+            "subject": "Skill Integration I",
+            "topics": [
+              { "topic": "Collaboration & Communication", "subtopics": ["Teamwork", "Code Reviews", "Documentation"] },
+              { "topic": "Time & Project Management", "subtopics": ["Agile Basics", "Kanban", "Task Prioritization"] }
+            ]
+          }
+        ]
+      },
+      {
+        "semester": 6,
+        "subjects": [
+          {
+            "subject": "System Design II",
+            "topics": [
+              { "topic": "Load Balancing", "subtopics": ["Types of Load Balancers", "Algorithms", "Implementation"] },
+              { "topic": "Messaging & Queues", "subtopics": ["Message Brokers", "Kafka", "RabbitMQ", "Pub/Sub Patterns"] },
+              { "topic": "Real-time Data", "subtopics": ["WebSockets", "Polling", "Server-Sent Events"] }
+            ]
+          },
+          {
+            "subject": "Skill Integration II",
+            "topics": [
+              { "topic": "Interview Preparation", "subtopics": ["DSA Patterns", "System Design Questions", "Behavioral Interviews"] },
+              { "topic": "Resume & Portfolio", "subtopics": ["Resume Building", "Project Showcasing", "LinkedIn Optimization"] },
+              { "topic": "Soft Skills", "subtopics": ["Communication", "Problem Solving", "Adaptability", "Leadership"] }
+            ]
+          },
+          {
+            "subject": "Industry Readiness",
+            "topics": [
+              { "topic": "Open Source Contribution", "subtopics": ["Finding Projects", "Making PRs", "Community Interaction"] },
+              { "topic": "Internship & Job Applications", "subtopics": ["Finding Roles", "Applying Effectively", "Networking"] }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
